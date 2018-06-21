@@ -4,6 +4,6 @@ KERNEL!="card*", GOTO="pulseaudio_end"
 
 #SUBSYSTEMS=="pci", RESULT=="?*", ATTRS{vendor}=="0x8086", ATTRS{device}=="0xa2f0", ENV{PULSE_PROFILE_SET}="my.conf"
 
-ATTRS{subsystem_vendor}=="0x1849", ATTRS{subsystem_device}=="0x1220", ENV{PULSE_PROFILE_SET}="saivert.conf"
+ATTRS{subsystem_vendor}=="0x1849", ATTRS{subsystem_device}=="0x1220", ENV{PULSE_PROFILE_SET}="analog-alt.conf"
 
 LABEL="pulseaudio_end"
