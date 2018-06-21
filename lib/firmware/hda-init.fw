@@ -1,0 +1,8 @@
+[codec]
+0x10ec1220 0x18491220 0
+
+[model]
+auto
+
+[hint]
+indep_hp = true
