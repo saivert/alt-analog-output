@@ -31,6 +31,8 @@ Installation instructions
         [hint]
         indep_hp = true
 
+    The file `etc/modprobe.d/hda.conf` in the repository will make sure this file is loaded.
+
 3. Create an udev rule file to select pulseaudio profile-set for this card. The subsystem ID you got earlier can be broken up into two WORDS where the first is the `subsystem_vendor` and the second is the `subsystem_device`.
 
         UBSYSTEM!="sound", GOTO="pulseaudio_end"
