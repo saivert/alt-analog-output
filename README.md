@@ -82,3 +82,8 @@ Technical information
 This works by adding a new device to ALSA named `alt` which is referenced by a new pulseaudio profile set. udev rules make sure to select the correct pulseaudio profile set.
 
 
+Todo
+----
+Current profile-set use the standard mixer paths which means that volume control isn't truly independent. Pulseaudio always adjust Master volume for the biggest overall volume adjustment and then adjusts the other mixer controls like Headphone/Front and PCM. This means that if Speaker volume is set too low you wont be able to adjust Headphone volume to max. This is only of consequence if you enable both at once using the Both profile.
+
+I have custom mixer paths in the works that only affect the Front and Headphone mixer controls. This leaves Master untouched so you have to make sure this is set to max volume. I don't know how to make Pulseaudio automatically reset the Master mixer control to 100%.
